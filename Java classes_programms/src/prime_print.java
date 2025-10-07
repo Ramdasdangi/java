@@ -16,7 +16,7 @@ public class prime_print {
         System.out.println("prime numbers are: ");
         for(int i=2; i<=n; i++){
             if(isprime(i)==true){
-                System.out.println(i);
+                System.out.print(i);
             }
             else{
                 continue;
