@@ -11,7 +11,7 @@ public class binaryCoffi {
     }
 
     public static int bCoff(int a ,int b){
-
+                                                          // co= n!/[r!(n-r)!]
         int nfact= fact(a);
         int rfact= fact(b);
         int nrfact=fact(a-b);

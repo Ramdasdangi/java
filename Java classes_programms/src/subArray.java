@@ -80,7 +80,7 @@ public class subArray {
     public static void main(String[] arg){
         int[] number ={1,2,3,-1,5,-1,6};
 //        print_subarrays(number);
-        sum_normal(number);
+//        sum_normal(number);
 //        sum_prefix(number);
         sum_kadane(number);
     }

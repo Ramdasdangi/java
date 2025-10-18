@@ -13,10 +13,10 @@ public class prime_print {
     }
 
     public static void print(int n){
-        System.out.println("prime numbers are: ");
+        System.out.print("prime numbers are: ");
         for(int i=2; i<=n; i++){
             if(isprime(i)==true){
-                System.out.print(i);
+                System.out.print(i+" ");
             }
             else{
                 continue;

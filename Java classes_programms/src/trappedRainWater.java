@@ -4,12 +4,14 @@ public class trappedRainWater {
         // calc max left boundary array
         int l= height.length;
         int[] left_max= new int[l];
+
         left_max[0] = height[0];
         for(int i=1; i< l; i++){
             left_max[i]=Math.max(height[i],left_max[i-1]);
         }
         // calc max right boundary array
         int[] right_max = new int[l];
+
         right_max[l-1]=height[l-1];
         for(int i= l-2; i>=0; i--){
             right_max[i]=Math.max(right_max[i+1] , height[i]);
@@ -26,7 +28,7 @@ public class trappedRainWater {
 
 
     public static void main(String[] arg){
-        int[] height={4,2,0,6,3,2,5};
+        int[] height={0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
         trapped_water(height);
     }
 }

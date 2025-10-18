@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class patter_butterfly {
 
-    public static void pettern(int n){
+    public static void pattern(int n){
         int a=6;
         for(int i=1; i<=n; i++){
             for(int j=1; j<=i; j++){
@@ -38,9 +38,10 @@ public class patter_butterfly {
 
     public static void main(String[] arg){
         Scanner s= new Scanner(System.in);
+
         int n;
         System.out.print("Enter number of line : ");
         n=s.nextInt();
-        pettern(n);
+        pattern(n);
     }
 }

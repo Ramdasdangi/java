@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
-public class array_operation {
+public class Searching_methods {
 
 
 
@@ -36,8 +36,7 @@ public class array_operation {
                 System.out.println("Index of element is "+j);
 //                r=true;
                 r=1;
-
-        }
+            }
         }
         if(r==-1){
             System.out.println("Element not found ");
@@ -81,7 +80,7 @@ public class array_operation {
         input(number,s , sc);
 
         print(number);
-
+        // return key for binary search bcz again we do not get input key for binary search
         int key =linearSearch(number , sc);
 
         binarySearch(number, key);
