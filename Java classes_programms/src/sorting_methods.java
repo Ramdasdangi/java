@@ -1,9 +1,9 @@
 import java.util.*;
-import java.util.Collection;
-public class shorting_methods {
 
-    // Bubble Short method (short by the compare next and push at the end )
-    public static void bubble_short(int [] num , int s) {
+public class sorting_methods {
+
+    // Bubble Sort method (short by the compare next and push at the end )
+    public static void bubble_sort(int [] num , int s) {
         int swap = 0;
         for(int i=0; i<s-1; i++) {
 
@@ -22,8 +22,8 @@ public class shorting_methods {
         }
     }
 
-    // Selection Short method (find minimum value and push in first )
-    public static void selection_short(int[] num, int s){
+    // Selection Sort method (find minimum value and push in first )
+    public static void selection_sort(int[] num, int s){
         for(int i=0; i<s-1; i++ ){
             int minposition=i;
             for (int j = i+1; j <s ; j++) {
@@ -38,8 +38,8 @@ public class shorting_methods {
         }
     }
 
-    // insertion short method( compare and insert )
-    public static void insertion_short(int[] num,int s){
+    // Insertion Sort method( compare and insert )
+    public static void insertion_sort(int[] num,int s){
         for(int i=1; i<s; i++){
             int curr=num[i];
             int pre=i-1;
@@ -51,17 +51,44 @@ public class shorting_methods {
         }
     }
 
-    // short by inbuild function
-    public static void Inbuild_short(int[] num,int n){
+    // Sort by Inbuild function
+    public static void Inbuild_sort(int[] num,int n){
         // shorting array in ascending order
-//        Arrays.sort(num);
-//        Arrays.sort(num,0,n-1 );  // sorting of array between index to index
+        Arrays.sort(num);
+        Arrays.sort(num,0,n-1 );  // sorting of array between index to index
 
         // shorting array in descending order
-        Arrays.sort(num , Collections.reverseOrder());
-        Arrays.sort(num, 0, n-2, Collections.reverseOrder());
+//        Arrays.sort(num , Collections.reverseOrder());
+//        Arrays.sort(num, 0, n-2, Collections.reverseOrder());
 
     }
+
+    // counting sort  In this method we sort element in +ve range
+    public static void counting_sort(int [] num , int n){
+        int largest = Integer.MIN_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            largest = Math.max(largest , num[i]);
+//            if(largest<num[i])
+//                largest=num[i];
+        }
+
+        int[] count = new int[largest+1];
+        for (int i = 0; i < n; i++) {
+            count[num[i]]++;
+        }
+
+        // Sorting
+        int j=0;
+        for (int i = 0; i <count.length ; i++) {
+            while (count[i]>0){
+                num[j]=i;
+                j++;
+                count[i]--;
+            }
+        }
+    }
+
     //  for print shorted array
     public static void print(int[] num ){
         int s= num.length;
@@ -76,15 +103,16 @@ public class shorting_methods {
         System.out.print("Enter size of array : ");
         int n= sc.nextInt();
         System.out.println("Enter element of the array or numbers : ");
-        int[] num = new int[n];
+        int [] num = new int[n];
         for(int i = 0; i<n; i++){
             num[i]=sc.nextInt();
         }
 
-//        bubble_short(num, n);
-//        selection_short(num,n);
-//        insertion_short(num,n);
-        Inbuild_short(num,n );
+//        bubble_sort(num, n);
+//        selection_sort(num,n);
+//        insertion_sort(num,n);
+//        Inbuild_sort(num,n );
+        counting_sort(num , n);
 
         print(num);   // for printing shorted array
     }

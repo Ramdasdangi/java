@@ -1,5 +1,6 @@
 import java.util.Scanner;
 public class prime_not {
+
 //    public static boolean check(int n){
 //        boolean check=true;
 //        for(int i=2; i<n-1; i++){
@@ -26,7 +27,9 @@ public class prime_not {
         System.out.print("enter a number : ");
         Scanner s=new Scanner(System.in);
         n=s.nextInt();
-        if(check(n)==true){
+
+        if(check(n)==true)
+        {
             System.out.println("number is  prime ");
         }
         else{System.out.println("number is not prime ");}
