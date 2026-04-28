@@ -1,18 +1,21 @@
 import java.util.Scanner;
 public class armstrong {
     public static void main(String[] arg){
+
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter a number : ");
         int n=sc.nextInt();
 
         int num=n;
-        int a,b=0;
+        int ld,sum=0;
+
         while (n>0){
-            a=n%10;
+            ld=n%10;
             n/=10;
-            b+=a*a*a;
+            sum+= ld*ld*ld;
         }
-        if(num==b)
+
+        if(num==sum)
             System.out.println("Given number is armstrong number ");
         else
             System.out.println("Given number is not armstrong number ");
@@ -20,3 +23,5 @@ public class armstrong {
         sc.close();
     }
 }
+
+//153,370,371,407
