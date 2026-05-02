@@ -1,3 +1,5 @@
+//this programm only for square matrix for find
+
 import java.util.Scanner;
 
 public class array_2D {
@@ -82,9 +84,9 @@ public class array_2D {
         int [][] matrix = new int[row][column];
 
 //        input(matrix , row , column);
-
+//
 //        print(matrix , row , column);
-
+//
 //        print_spiral_matrix(matrix, row , column);
 
         if(row==column) {
